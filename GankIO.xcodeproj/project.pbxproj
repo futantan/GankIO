@@ -97,12 +97,9 @@
 		5631274F1C8C23C2006A435E /* GankIO */ = {
 			isa = PBXGroup;
 			children = (
-				563127501C8C23C2006A435E /* AppDelegate.swift */,
 				563127521C8C23C2006A435E /* ViewController.swift */,
 				563127541C8C23C2006A435E /* Main.storyboard */,
-				563127571C8C23C2006A435E /* Assets.xcassets */,
-				563127591C8C23C2006A435E /* LaunchScreen.storyboard */,
-				5631275C1C8C23C2006A435E /* Info.plist */,
+				5631277E1C8C2702006A435E /* Supporting Files */,
 			);
 			path = GankIO;
 			sourceTree = "<group>";
@@ -123,6 +120,17 @@
 				563127721C8C23C2006A435E /* Info.plist */,
 			);
 			path = GankIOUITests;
+			sourceTree = "<group>";
+		};
+		5631277E1C8C2702006A435E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				563127571C8C23C2006A435E /* Assets.xcassets */,
+				5631275C1C8C23C2006A435E /* Info.plist */,
+				563127591C8C23C2006A435E /* LaunchScreen.storyboard */,
+				563127501C8C23C2006A435E /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,6 +490,7 @@
 				563127771C8C23C2006A435E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		563127781C8C23C2006A435E /* Build configuration list for PBXNativeTarget "GankIOTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +499,7 @@
 				5631277A1C8C23C2006A435E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5631277B1C8C23C2006A435E /* Build configuration list for PBXNativeTarget "GankIOUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +508,7 @@
 				5631277D1C8C23C2006A435E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

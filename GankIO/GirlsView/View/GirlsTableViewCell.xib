@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="girlsTableViewCell" rowHeight="350" id="dyE-OD-qMJ" customClass="GirlsTableViewCell" customModule="GankIO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dyE-OD-qMJ" id="DHf-TE-bi8">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8K-uN-Nqz">
+                        <rect key="frame" x="8" y="5" width="304" height="339"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xiu-yU-qhD">
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="292"/>
+                                <color key="backgroundColor" red="0.0" green="0.67843137249999996" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Xiu-yU-qhD" secondAttribute="bottom" constant="47" id="7nX-rc-5R5"/>
+                            <constraint firstAttribute="trailing" secondItem="Xiu-yU-qhD" secondAttribute="trailing" id="8qd-bg-plr"/>
+                            <constraint firstItem="Xiu-yU-qhD" firstAttribute="top" secondItem="o8K-uN-Nqz" secondAttribute="top" id="PYh-qi-BTo"/>
+                            <constraint firstItem="Xiu-yU-qhD" firstAttribute="leading" secondItem="o8K-uN-Nqz" secondAttribute="leading" id="V9f-eu-6eN"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="o8K-uN-Nqz" firstAttribute="centerX" secondItem="DHf-TE-bi8" secondAttribute="centerX" id="4DP-wj-C5B"/>
+                    <constraint firstItem="o8K-uN-Nqz" firstAttribute="top" secondItem="DHf-TE-bi8" secondAttribute="topMargin" constant="-3" id="7h9-FY-iGS"/>
+                    <constraint firstItem="o8K-uN-Nqz" firstAttribute="centerY" secondItem="DHf-TE-bi8" secondAttribute="centerY" id="Fby-Hy-VaN"/>
+                    <constraint firstItem="o8K-uN-Nqz" firstAttribute="leading" secondItem="DHf-TE-bi8" secondAttribute="leadingMargin" id="Mhk-Gr-mYj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cardView" destination="o8K-uN-Nqz" id="atd-Xz-6UN"/>
+                <outlet property="girlImageView" destination="Xiu-yU-qhD" id="zWv-5F-Fjw"/>
+            </connections>
+            <point key="canvasLocation" x="300" y="341"/>
+        </tableViewCell>
+    </objects>
+</document>

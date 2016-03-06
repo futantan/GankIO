@@ -22,6 +22,8 @@
 		563127E91C8C4734006A435E /* Android.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563127E81C8C4734006A435E /* Android.storyboard */; };
 		563127EB1C8C6310006A435E /* FrontEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563127EA1C8C6310006A435E /* FrontEndViewController.swift */; };
 		563127ED1C8C6324006A435E /* FrontEnd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563127EC1C8C6324006A435E /* FrontEnd.storyboard */; };
+		563127EF1C8C6E96006A435E /* GirlsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563127EE1C8C6E96006A435E /* GirlsTableViewCell.xib */; };
+		563127F11C8C70FE006A435E /* GirlsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563127F01C8C70FE006A435E /* GirlsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		563127E81C8C4734006A435E /* Android.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Android.storyboard; sourceTree = "<group>"; };
 		563127EA1C8C6310006A435E /* FrontEndViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrontEndViewController.swift; sourceTree = "<group>"; };
 		563127EC1C8C6324006A435E /* FrontEnd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FrontEnd.storyboard; sourceTree = "<group>"; };
+		563127EE1C8C6E96006A435E /* GirlsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GirlsTableViewCell.xib; sourceTree = "<group>"; };
+		563127F01C8C70FE006A435E /* GirlsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				563127DC1C8C30E3006A435E /* Girls.storyboard */,
+				563127EE1C8C6E96006A435E /* GirlsTableViewCell.xib */,
+				563127F01C8C70FE006A435E /* GirlsTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 				563127ED1C8C6324006A435E /* FrontEnd.storyboard in Resources */,
 				563127DD1C8C30E3006A435E /* Girls.storyboard in Resources */,
 				5631275B1C8C23C2006A435E /* LaunchScreen.storyboard in Resources */,
+				563127EF1C8C6E96006A435E /* GirlsTableViewCell.xib in Resources */,
 				563127A01C8C2C3E006A435E /* TabBar.storyboard in Resources */,
 				563127E11C8C34A0006A435E /* IOS.storyboard in Resources */,
 				563127E91C8C4734006A435E /* Android.storyboard in Resources */,
@@ -429,6 +436,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				563127F11C8C70FE006A435E /* GirlsTableViewCell.swift in Sources */,
 				563127E31C8C34C2006A435E /* IOSViewController.swift in Sources */,
 				563127A11C8C2C3E006A435E /* TabBarController.swift in Sources */,
 				563127DF1C8C3107006A435E /* GirlsTableViewController.swift in Sources */,

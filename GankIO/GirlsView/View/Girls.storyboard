@@ -8,7 +8,7 @@
         <!--Girls-->
         <scene sceneID="Dm0-Ug-c7u">
             <objects>
-                <viewController id="4JY-kc-5OO" sceneMemberID="viewController">
+                <viewController id="4JY-kc-5OO" customClass="GirlsViewController" customModule="GankIO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="idc-qk-bgw"/>
                         <viewControllerLayoutGuide type="bottom" id="m0w-QS-gzF"/>
@@ -17,16 +17,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Girls" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVJ-Uy-ulW">
-                                <rect key="frame" x="78" y="112" width="35" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="350" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oyM-qA-FLN">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oyM-qA-FLN" secondAttribute="trailing" id="Dvv-23-XqI"/>
+                            <constraint firstItem="oyM-qA-FLN" firstAttribute="leading" secondItem="YcE-zq-JpA" secondAttribute="leading" id="J0Q-PJ-ipw"/>
+                            <constraint firstItem="oyM-qA-FLN" firstAttribute="bottom" secondItem="m0w-QS-gzF" secondAttribute="top" id="YSj-Pt-ZE1"/>
+                            <constraint firstItem="oyM-qA-FLN" firstAttribute="top" secondItem="YcE-zq-JpA" secondAttribute="top" id="tU8-rr-1ot"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Girls" id="9si-MY-mD4"/>
+                    <connections>
+                        <outlet property="GirlsTableView" destination="oyM-qA-FLN" id="CD1-fd-slJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lut-yy-szn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

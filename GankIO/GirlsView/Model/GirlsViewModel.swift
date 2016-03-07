@@ -11,6 +11,8 @@ import Alamofire
 
 class GirlsViewModel
 {
+  var gankDailys = [GankDaily]()
+  
   func getAlamofire() {
     let string = "http://gank.io/api/data/福利/1/1"
     let url = string.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet(charactersInString: string))

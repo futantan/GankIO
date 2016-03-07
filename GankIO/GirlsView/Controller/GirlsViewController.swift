@@ -10,13 +10,14 @@ import UIKit
 
 class GirlsViewController: UIViewController
 {
-  
   @IBOutlet weak var girlsTableView: UITableView! {
     didSet {
       girlsTableView.dataSource = self
       girlsTableView.delegate = self
     }
   }
+  
+  let model = GirlsViewModel()
   
   private struct Names {
     static let nibName = "GirlsTableViewCell"
@@ -26,6 +27,7 @@ class GirlsViewController: UIViewController
   override func viewDidLoad() {
     super.viewDidLoad()
     girlsTableView.registerNib(UINib(nibName: Names.nibName, bundle: nil), forCellReuseIdentifier: Names.girlsTableViewCellName)
+    model.getAlamofire()
   }
 }
 

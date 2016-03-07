@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Girls-->
+        <!--妹子-->
         <scene sceneID="Dm0-Ug-c7u">
             <objects>
                 <viewController id="4JY-kc-5OO" customClass="GirlsViewController" customModule="GankIO" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                             <constraint firstItem="oyM-qA-FLN" firstAttribute="top" secondItem="YcE-zq-JpA" secondAttribute="top" id="tU8-rr-1ot"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Girls" id="9si-MY-mD4"/>
+                    <navigationItem key="navigationItem" title="妹子" id="9si-MY-mD4"/>
                     <connections>
                         <outlet property="GirlsTableView" destination="oyM-qA-FLN" id="CD1-fd-slJ"/>
                     </connections>

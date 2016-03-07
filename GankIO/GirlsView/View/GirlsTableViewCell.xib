@@ -12,15 +12,15 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dyE-OD-qMJ" id="DHf-TE-bi8">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="349.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8K-uN-Nqz">
-                        <rect key="frame" x="8" y="5" width="304" height="339"/>
+                        <rect key="frame" x="8" y="8" width="304" height="339.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xiu-yU-qhD">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="292"/>
-                                <color key="backgroundColor" red="0.0" green="0.67843137249999996" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="292.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -35,8 +35,8 @@
                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="o8K-uN-Nqz" firstAttribute="centerX" secondItem="DHf-TE-bi8" secondAttribute="centerX" id="4DP-wj-C5B"/>
-                    <constraint firstItem="o8K-uN-Nqz" firstAttribute="top" secondItem="DHf-TE-bi8" secondAttribute="topMargin" constant="-3" id="7h9-FY-iGS"/>
-                    <constraint firstItem="o8K-uN-Nqz" firstAttribute="centerY" secondItem="DHf-TE-bi8" secondAttribute="centerY" id="Fby-Hy-VaN"/>
+                    <constraint firstItem="o8K-uN-Nqz" firstAttribute="top" secondItem="DHf-TE-bi8" secondAttribute="topMargin" id="7h9-FY-iGS"/>
+                    <constraint firstItem="o8K-uN-Nqz" firstAttribute="centerY" secondItem="DHf-TE-bi8" secondAttribute="centerY" constant="3" id="Fby-Hy-VaN"/>
                     <constraint firstItem="o8K-uN-Nqz" firstAttribute="leading" secondItem="DHf-TE-bi8" secondAttribute="leadingMargin" id="Mhk-Gr-mYj"/>
                 </constraints>
             </tableViewCellContentView>

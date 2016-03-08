@@ -10,16 +10,16 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-protocol GirlsViewModelDelegate
+protocol GankModelDelegate
 {
-  func girlsViewModelDidGetAlamofire()
+  func gankModelDidGetAlamofire()
 }
 
-class GirlsViewModel
+class GankModel
 {
   var gankDailys = [GankDaily]()
   
-  var delegate: GirlsViewModelDelegate?
+  var delegate: GankModelDelegate?
   
   func getAlamofire() {
     let string = "http://gank.io/api/data/福利/100/1"
@@ -45,7 +45,7 @@ class GirlsViewModel
       }()
       gankDailys.append(dictionary)
 //      print(gankDailys)
-      delegate!.girlsViewModelDidGetAlamofire()
+      delegate!.gankModelDidGetAlamofire()
     }
   }
 }

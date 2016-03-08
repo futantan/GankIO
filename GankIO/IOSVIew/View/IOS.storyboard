@@ -17,16 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IOS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFb-1c-b0l">
-                                <rect key="frame" x="89" y="145" width="28" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BE4-VH-Gs1">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BE4-VH-Gs1" secondAttribute="trailing" id="0Ig-Z6-ZN7"/>
+                            <constraint firstItem="BE4-VH-Gs1" firstAttribute="top" secondItem="Lj8-FT-R7H" secondAttribute="top" id="A08-4E-4kF"/>
+                            <constraint firstItem="BE4-VH-Gs1" firstAttribute="bottom" secondItem="Htl-EU-jYh" secondAttribute="top" id="R51-Oj-F7a"/>
+                            <constraint firstItem="BE4-VH-Gs1" firstAttribute="leading" secondItem="Lj8-FT-R7H" secondAttribute="leading" id="fLa-ge-SYZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="IOS" id="Ah7-NH-Wrc"/>
+                    <connections>
+                        <outlet property="iOSTableView" destination="BE4-VH-Gs1" id="sHh-mX-aYa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pt5-Sk-Mc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

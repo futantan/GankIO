@@ -18,7 +18,7 @@ class GirlsViewController: UIViewController
     }
   }
   
-  var model = GirlsViewModel() {
+  var model = GankModel() {
     didSet {
       model.delegate = self
     }
@@ -32,7 +32,7 @@ class GirlsViewController: UIViewController
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    model = GirlsViewModel()
+    model = GankModel()
     model.getAlamofire()
     girlsTableView.registerNib(UINib(nibName: Names.nibName, bundle: nil), forCellReuseIdentifier: Names.girlsTableViewCellName)
   }
@@ -72,8 +72,8 @@ extension GirlsViewController: UITableViewDelegate {
   }
 }
 
-extension GirlsViewController: GirlsViewModelDelegate {
-  func girlsViewModelDidGetAlamofire() {
+extension GirlsViewController: GankModelDelegate {
+  func gankModelDidGetAlamofire() {
     girlsTableView.reloadData()
   }
 }

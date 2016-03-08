@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GirlsDaily
+struct GankDaily
 {
   var creatAt = ""
   var who = ""

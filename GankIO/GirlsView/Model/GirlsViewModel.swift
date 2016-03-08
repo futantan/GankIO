@@ -17,7 +17,7 @@ protocol GirlsViewModelDelegate
 
 class GirlsViewModel
 {
-  var gankDailys = [GirlsDaily]()
+  var gankDailys = [GankDaily]()
   
   var delegate: GirlsViewModelDelegate?
   
@@ -36,8 +36,8 @@ class GirlsViewModel
   func parseJSON(data: AnyObject) {
     let json = JSON(data)
     for i in 0...99 {
-      let dictionary: GirlsDaily = {
-        var dictionary = GirlsDaily()
+      let dictionary: GankDaily = {
+        var dictionary = GankDaily()
         dictionary.who = json["results"][i]["who"].stringValue
         dictionary.url = json["results"][i]["url"].stringValue
         dictionary.dateFromString(json["results"][i]["createdAt"].stringValue)

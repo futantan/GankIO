@@ -25,7 +25,7 @@
 		563127ED1C8C6324006A435E /* FrontEnd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563127EC1C8C6324006A435E /* FrontEnd.storyboard */; };
 		563127EF1C8C6E96006A435E /* GirlsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563127EE1C8C6E96006A435E /* GirlsTableViewCell.xib */; };
 		563127F11C8C70FE006A435E /* GirlsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563127F01C8C70FE006A435E /* GirlsTableViewCell.swift */; };
-		5644B2F81C8EBA2B007E378B /* GirlsDaily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5644B2F71C8EBA2B007E378B /* GirlsDaily.swift */; };
+		5644B2FA1C8EE2F0007E378B /* GirlsDaily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5644B2F91C8EE2F0007E378B /* GirlsDaily.swift */; };
 		56DDAD611C8D2E9400A8DCCF /* GirlsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DDAD601C8D2E9400A8DCCF /* GirlsViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +71,7 @@
 		563127EC1C8C6324006A435E /* FrontEnd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FrontEnd.storyboard; sourceTree = "<group>"; };
 		563127EE1C8C6E96006A435E /* GirlsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GirlsTableViewCell.xib; sourceTree = "<group>"; };
 		563127F01C8C70FE006A435E /* GirlsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlsTableViewCell.swift; sourceTree = "<group>"; };
-		5644B2F71C8EBA2B007E378B /* GirlsDaily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlsDaily.swift; sourceTree = "<group>"; };
+		5644B2F91C8EE2F0007E378B /* GirlsDaily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlsDaily.swift; sourceTree = "<group>"; };
 		56DDAD601C8D2E9400A8DCCF /* GirlsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlsViewModel.swift; sourceTree = "<group>"; };
 		7278F893BA34CE4909928DEF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		75F80B7BA81D4C86B396BCBE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,7 +254,6 @@
 		563127921C8C2B3F006A435E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5644B2F71C8EBA2B007E378B /* GirlsDaily.swift */,
 				56DDAD601C8D2E9400A8DCCF /* GirlsViewModel.swift */,
 			);
 			path = Model;
@@ -307,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				5631279F1C8C2C3E006A435E /* TabBarController.swift */,
+				5644B2F91C8EE2F0007E378B /* GirlsDaily.swift */,
 				5631279E1C8C2C3E006A435E /* TabBar.storyboard */,
 			);
 			path = TabBar;
@@ -519,7 +519,7 @@
 			files = (
 				563127F11C8C70FE006A435E /* GirlsTableViewCell.swift in Sources */,
 				563127E31C8C34C2006A435E /* IOSViewController.swift in Sources */,
-				5644B2F81C8EBA2B007E378B /* GirlsDaily.swift in Sources */,
+				5644B2FA1C8EE2F0007E378B /* GirlsDaily.swift in Sources */,
 				563127A11C8C2C3E006A435E /* TabBarController.swift in Sources */,
 				56DDAD611C8D2E9400A8DCCF /* GirlsViewModel.swift in Sources */,
 				563127DF1C8C3107006A435E /* GirlsViewController.swift in Sources */,

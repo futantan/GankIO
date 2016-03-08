@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class GirlsViewModel
 {
@@ -18,11 +19,16 @@ class GirlsViewModel
     let url = string.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet(charactersInString: string))
     print(url)
     Alamofire.request(.GET, url!).responseJSON() {
-       response in
-      
-      if let JSON = response.result.value {
-        print("JSON: \(JSON)")
+      response in
+      if let data = response.result.value {
+        let json = JSON(data)
+        print(json["results"][0]["who"].string)
       }
     }
   }
+  
+  func dictionaryFromJSONString(JSONString: String) {
+    
+  }
+  
 }

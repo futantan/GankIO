@@ -236,8 +236,8 @@
 		563127901C8C2B3F006A435E /* GirlsView */ = {
 			isa = PBXGroup;
 			children = (
-				563127911C8C2B3F006A435E /* Controller */,
 				563127921C8C2B3F006A435E /* Model */,
+				563127911C8C2B3F006A435E /* Controller */,
 				563127931C8C2B3F006A435E /* View */,
 			);
 			path = GirlsView;

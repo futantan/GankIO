@@ -10,14 +10,13 @@ import Foundation
 
 struct GankDaily
 {
-  let id = ""
-  let ns = ""
-  let creatAt = NSDate()
-  let desc = ""
-  let publishedAt = NSDate()
-  let source = ""
-  let type = ""
-  let url = ""
-  let used: Bool = true
-  let who = ""
+  var id = ""
+  var ns = ""
+  var creatAt = NSDate()
+  var desc = ""
+  var source = ""
+  var type = ""
+  var used: Bool = true
+  var who = ""
+  var url = ""
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class GirlsViewController: UIViewController
 {
@@ -17,7 +18,11 @@ class GirlsViewController: UIViewController
     }
   }
   
-  let model = GirlsViewModel()
+  var model = GirlsViewModel() {
+    didSet {
+      model.delegate = self
+    }
+  }
   
   private struct Names {
     static let nibName = "GirlsTableViewCell"
@@ -26,19 +31,29 @@ class GirlsViewController: UIViewController
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    girlsTableView.registerNib(UINib(nibName: Names.nibName, bundle: nil), forCellReuseIdentifier: Names.girlsTableViewCellName)
+    
+    model = GirlsViewModel()
     model.getAlamofire()
+    girlsTableView.registerNib(UINib(nibName: Names.nibName, bundle: nil), forCellReuseIdentifier: Names.girlsTableViewCellName)
   }
 }
 
 extension GirlsViewController: UITableViewDataSource
 {
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return 10
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(Names.girlsTableViewCellName) as! GirlsTableViewCell
+    if model.gankDailys.count != 0 {
+        let urlString = self.model.gankDailys[indexPath.row].url
+      cell.girlImageView.kf_setImageWithURL(NSURL(string: urlString)!)
+      cell.girlImageView.contentMode = .ScaleAspectFill
+      cell.girlImageView.clipsToBounds = true
+    } else {
+      print("is nil")
+    }
     return cell
   }
 }
@@ -46,5 +61,12 @@ extension GirlsViewController: UITableViewDataSource
 extension GirlsViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
     return nil
+  }
+}
+
+extension GirlsViewController: GirlsViewModelDelegate {
+  func girlsViewModelDidGetAlamofire() {
+    girlsTableView.reloadData()
+    print("reloading")
   }
 }

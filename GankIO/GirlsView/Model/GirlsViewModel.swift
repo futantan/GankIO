@@ -10,25 +10,41 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
+protocol GirlsViewModelDelegate
+{
+  func girlsViewModelDidGetAlamofire()
+}
+
 class GirlsViewModel
 {
   var gankDailys = [GankDaily]()
   
+  var delegate: GirlsViewModelDelegate?
+  
   func getAlamofire() {
-    let string = "http://gank.io/api/data/福利/1/1"
+    let string = "http://gank.io/api/data/福利/10/1"
     let url = string.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet(charactersInString: string))
     print(url)
     Alamofire.request(.GET, url!).responseJSON() {
       response in
       if let data = response.result.value {
-        let json = JSON(data)
-        print(json["results"][0]["who"].string)
+        self.parseJSON(data)
       }
     }
   }
   
-  func dictionaryFromJSONString(JSONString: String) {
-    
+  func parseJSON(data: AnyObject) {
+    let json = JSON(data)
+    for i in 0...9 {
+      let dictionary: GankDaily = {
+        var dictionary = GankDaily()
+        dictionary.who = json["results"][i]["who"].stringValue
+        dictionary.url = json["results"][i]["url"].stringValue
+        return dictionary
+      }()
+      gankDailys.append(dictionary)
+//      print(gankDailys)
+      delegate!.girlsViewModelDidGetAlamofire()
+    }
   }
-  
 }

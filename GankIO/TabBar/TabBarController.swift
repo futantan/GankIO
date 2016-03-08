@@ -20,23 +20,29 @@ class TabBarController: UITabBarController
   override func viewDidLoad() {
     super.viewDidLoad()
     setAllChildViews()
+    self.tabBar.barTintColor = UIColor(red:0.29, green:0.35, blue:0.5, alpha:1)
+    self.tabBar.tintColor = UIColor.whiteColor()
   }
   
   func setAllChildViews() {
     let girlsViewController = loadViewControllerFromStoryboard(ChildViewNames.girlsView)
     girlsViewController!.tabBarItem.title = "妹子"
+    girlsViewController!.tabBarItem.image = UIImage(named: "bra")
     self.addChildViewController(girlsViewController!)
     
     let iOSViewController = loadViewControllerFromStoryboard(ChildViewNames.iOSView)
     iOSViewController!.tabBarItem.title = "iOS"
+    iOSViewController!.tabBarItem.image = UIImage(named: "apple")
     self.addChildViewController(iOSViewController!)
     
     let androidViewController = loadViewControllerFromStoryboard(ChildViewNames.androidView)
     androidViewController!.tabBarItem.title = "Android"
+    androidViewController!.tabBarItem.image = UIImage(named: "android")
     self.addChildViewController(androidViewController!)
     
     let frontEndViewController = loadViewControllerFromStoryboard(ChildViewNames.frontEndView)
     frontEndViewController!.tabBarItem.title = "前端"
+    frontEndViewController!.tabBarItem.image = UIImage(named: "frontEnd")
     self.addChildViewController(frontEndViewController!)
   }
   

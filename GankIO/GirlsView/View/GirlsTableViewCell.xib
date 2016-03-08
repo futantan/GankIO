@@ -48,7 +48,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="o8K-uN-Nqz" firstAttribute="centerX" secondItem="DHf-TE-bi8" secondAttribute="centerX" id="4DP-wj-C5B"/>
                     <constraint firstItem="o8K-uN-Nqz" firstAttribute="top" secondItem="DHf-TE-bi8" secondAttribute="topMargin" id="7h9-FY-iGS"/>
@@ -56,6 +56,7 @@
                     <constraint firstItem="o8K-uN-Nqz" firstAttribute="leading" secondItem="DHf-TE-bi8" secondAttribute="leadingMargin" id="Mhk-Gr-mYj"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="cardView" destination="o8K-uN-Nqz" id="atd-Xz-6UN"/>
                 <outlet property="dateLabel" destination="FGO-wi-JXB" id="8YC-oN-eGK"/>

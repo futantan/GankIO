@@ -58,12 +58,7 @@ extension GirlsViewController: UITableViewDataSource
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(GirlsViewNames.girlsTableViewCellName) as! GirlsTableViewCell
     if model.gankDailys.count != 0 {
-        let urlString = self.model.gankDailys[indexPath.row].url
-      cell.girlImageView.kf_setImageWithURL(NSURL(string: urlString)!)
-      cell.girlImageView.contentMode = .ScaleAspectFill
-      cell.girlImageView.clipsToBounds = true
-      cell.nameLabel.text = self.model.gankDailys[indexPath.row].who
-      cell.dateLabel.text = self.model.gankDailys[indexPath.row].creatAt
+      setUpCell(cell, indexPath: indexPath)
       UIView.animateWithDuration(0.5) {
         cell.girlImageView.alpha = 1.0
         cell.contentView.alpha = 1.0
@@ -76,10 +71,19 @@ extension GirlsViewController: UITableViewDataSource
         visited[indexPath.row] = true
       }
     } else {
-      cell.girlImageView.alpha = 0
-      cell.contentView.alpha = 0
+      cell.cardView.alpha = 0
     }
     return cell
+  }
+  
+  func setUpCell(cell: GirlsTableViewCell, indexPath: NSIndexPath) {
+    cell.cardView.alpha = 1.0
+    let urlString = self.model.gankDailys[indexPath.row].url
+    cell.girlImageView.kf_setImageWithURL(NSURL(string: urlString)!)
+    cell.girlImageView.contentMode = .ScaleAspectFill
+    cell.girlImageView.clipsToBounds = true
+    cell.nameLabel.text = model.gankDailys[indexPath.row].who
+    cell.dateLabel.text = model.gankDailys[indexPath.row].creatAt
   }
 }
 

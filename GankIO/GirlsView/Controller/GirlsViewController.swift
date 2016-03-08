@@ -41,7 +41,7 @@ class GirlsViewController: UIViewController
 extension GirlsViewController: UITableViewDataSource
 {
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 10
+    return 100
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -51,7 +51,15 @@ extension GirlsViewController: UITableViewDataSource
       cell.girlImageView.kf_setImageWithURL(NSURL(string: urlString)!)
       cell.girlImageView.contentMode = .ScaleAspectFill
       cell.girlImageView.clipsToBounds = true
+      cell.nameLabel.text = self.model.gankDailys[indexPath.row].who
+      cell.dateLabel.text = self.model.gankDailys[indexPath.row].creatAt
+      UIView.animateWithDuration(1) {
+        cell.girlImageView.alpha = 1.0
+        cell.contentView.alpha = 1.0
+      }
     } else {
+      cell.girlImageView.alpha = 0
+      cell.contentView.alpha = 0
       print("is nil")
     }
     return cell
@@ -67,6 +75,5 @@ extension GirlsViewController: UITableViewDelegate {
 extension GirlsViewController: GirlsViewModelDelegate {
   func girlsViewModelDidGetAlamofire() {
     girlsTableView.reloadData()
-    print("reloading")
   }
 }

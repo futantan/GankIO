@@ -23,4 +23,7 @@ class GirlsTableViewCell: UITableViewCell
 //      girlImageView.layer.masksToBounds = true
     }
   }
+  
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var dateLabel: UILabel!
 }

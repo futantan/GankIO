@@ -19,16 +19,32 @@
                         <rect key="frame" x="8" y="8" width="304" height="339.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xiu-yU-qhD">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="292.5"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="289.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e85-KU-mui">
+                                <rect key="frame" x="8" y="297" width="44" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGO-wi-JXB">
+                                <rect key="frame" x="8" y="318.5" width="35.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Xiu-yU-qhD" secondAttribute="bottom" constant="47" id="7nX-rc-5R5"/>
+                            <constraint firstItem="e85-KU-mui" firstAttribute="leading" secondItem="o8K-uN-Nqz" secondAttribute="leading" constant="8" id="1tp-pM-w6g"/>
+                            <constraint firstAttribute="bottom" secondItem="Xiu-yU-qhD" secondAttribute="bottom" constant="50" id="7nX-rc-5R5"/>
                             <constraint firstAttribute="trailing" secondItem="Xiu-yU-qhD" secondAttribute="trailing" id="8qd-bg-plr"/>
+                            <constraint firstItem="e85-KU-mui" firstAttribute="top" secondItem="Xiu-yU-qhD" secondAttribute="bottom" constant="7.5" id="IK2-gx-hgX"/>
                             <constraint firstItem="Xiu-yU-qhD" firstAttribute="top" secondItem="o8K-uN-Nqz" secondAttribute="top" id="PYh-qi-BTo"/>
                             <constraint firstItem="Xiu-yU-qhD" firstAttribute="leading" secondItem="o8K-uN-Nqz" secondAttribute="leading" id="V9f-eu-6eN"/>
+                            <constraint firstItem="FGO-wi-JXB" firstAttribute="leading" secondItem="o8K-uN-Nqz" secondAttribute="leading" constant="8" id="njN-zW-bbH"/>
+                            <constraint firstItem="FGO-wi-JXB" firstAttribute="top" secondItem="e85-KU-mui" secondAttribute="bottom" id="nom-b9-XpN"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -42,7 +58,9 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="cardView" destination="o8K-uN-Nqz" id="atd-Xz-6UN"/>
+                <outlet property="dateLabel" destination="FGO-wi-JXB" id="8YC-oN-eGK"/>
                 <outlet property="girlImageView" destination="Xiu-yU-qhD" id="zWv-5F-Fjw"/>
+                <outlet property="nameLabel" destination="e85-KU-mui" id="jm9-ci-a0T"/>
             </connections>
             <point key="canvasLocation" x="300" y="341"/>
         </tableViewCell>

@@ -17,12 +17,12 @@ protocol GirlsViewModelDelegate
 
 class GirlsViewModel
 {
-  var gankDailys = [GankDaily]()
+  var gankDailys = [GirlsDaily]()
   
   var delegate: GirlsViewModelDelegate?
   
   func getAlamofire() {
-    let string = "http://gank.io/api/data/福利/10/1"
+    let string = "http://gank.io/api/data/福利/100/1"
     let url = string.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet(charactersInString: string))
     print(url)
     Alamofire.request(.GET, url!).responseJSON() {
@@ -35,11 +35,12 @@ class GirlsViewModel
   
   func parseJSON(data: AnyObject) {
     let json = JSON(data)
-    for i in 0...9 {
-      let dictionary: GankDaily = {
-        var dictionary = GankDaily()
+    for i in 0...99 {
+      let dictionary: GirlsDaily = {
+        var dictionary = GirlsDaily()
         dictionary.who = json["results"][i]["who"].stringValue
         dictionary.url = json["results"][i]["url"].stringValue
+        dictionary.dateFromString(json["results"][i]["createdAt"].stringValue)
         return dictionary
       }()
       gankDailys.append(dictionary)

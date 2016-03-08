@@ -23,8 +23,18 @@ class IOSViewController: UIViewController
     }
   }
   
+  private struct IOSViewNames {
+    static let iOSTableViewCellIdentifier = "iOSTableViewCell"
+    static let iOSGankUrlString = "http://gank.io/api/data/iOS/100/2"
+  }
+  
   override func viewDidLoad() {
-    <#code#>
+    super.viewDidLoad()
+    
+    model = GankModel()
+    model.getAlamofireFromString(IOSViewNames.iOSGankUrlString)
+    
+    iOSTableView.registerNib(UINib(nibName: "MyTableViewCell", bundle: nil), forCellReuseIdentifier: IOSViewNames.iOSTableViewCellIdentifier)
   }
 }
 
@@ -36,11 +46,22 @@ extension IOSViewController: UITableViewDelegate
 extension IOSViewController: UITableViewDataSource
 {
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 5
+    return 100
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    return UITableViewCell()
+    let cell = iOSTableView.dequeueReusableCellWithIdentifier(IOSViewNames.iOSTableViewCellIdentifier) as! MyTableViewCell
+    if model.gankDailys.count != 0 {
+      cell.titleLabel.text = model.gankDailys[indexPath.row].desc
+      cell.nameLabel.text = model.gankDailys[indexPath.row].who
+      cell.titleLabel.alpha = 0
+      cell.nameLabel.alpha = 0
+      UIView.animateWithDuration(1.0) {
+        cell.titleLabel.alpha = 1.0
+        cell.nameLabel.alpha = 1.0
+      }
+    }
+    return cell
   }
 }
 

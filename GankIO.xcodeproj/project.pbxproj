@@ -25,8 +25,10 @@
 		563127ED1C8C6324006A435E /* FrontEnd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563127EC1C8C6324006A435E /* FrontEnd.storyboard */; };
 		563127EF1C8C6E96006A435E /* GirlsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 563127EE1C8C6E96006A435E /* GirlsTableViewCell.xib */; };
 		563127F11C8C70FE006A435E /* GirlsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563127F01C8C70FE006A435E /* GirlsTableViewCell.swift */; };
-		5644B2FA1C8EE2F0007E378B /* GirlsDaily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5644B2F91C8EE2F0007E378B /* GirlsDaily.swift */; };
 		5644B3001C8EE5C4007E378B /* GankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5644B2FF1C8EE5C4007E378B /* GankModel.swift */; };
+		5644B3031C8F0B32007E378B /* GankDaily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5644B3021C8F0B32007E378B /* GankDaily.swift */; };
+		5644B3071C8F125B007E378B /* MyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5644B3061C8F125B007E378B /* MyTableViewCell.xib */; };
+		5644B3091C8F1268007E378B /* MyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5644B3081C8F1268007E378B /* MyTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +73,10 @@
 		563127EC1C8C6324006A435E /* FrontEnd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FrontEnd.storyboard; sourceTree = "<group>"; };
 		563127EE1C8C6E96006A435E /* GirlsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GirlsTableViewCell.xib; sourceTree = "<group>"; };
 		563127F01C8C70FE006A435E /* GirlsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlsTableViewCell.swift; sourceTree = "<group>"; };
-		5644B2F91C8EE2F0007E378B /* GirlsDaily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlsDaily.swift; sourceTree = "<group>"; };
 		5644B2FF1C8EE5C4007E378B /* GankModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankModel.swift; sourceTree = "<group>"; };
+		5644B3021C8F0B32007E378B /* GankDaily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GankDaily.swift; sourceTree = "<group>"; };
+		5644B3061C8F125B007E378B /* MyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewCell.xib; sourceTree = "<group>"; };
+		5644B3081C8F1268007E378B /* MyTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableView.swift; sourceTree = "<group>"; };
 		7278F893BA34CE4909928DEF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		75F80B7BA81D4C86B396BCBE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -299,8 +303,9 @@
 			isa = PBXGroup;
 			children = (
 				5631279F1C8C2C3E006A435E /* TabBarController.swift */,
-				5644B2F91C8EE2F0007E378B /* GirlsDaily.swift */,
 				5631279E1C8C2C3E006A435E /* TabBar.storyboard */,
+				5644B3081C8F1268007E378B /* MyTableView.swift */,
+				5644B3061C8F125B007E378B /* MyTableViewCell.xib */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -308,6 +313,7 @@
 		5644B2FE1C8EE5C4007E378B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5644B3021C8F0B32007E378B /* GankDaily.swift */,
 				5644B2FF1C8EE5C4007E378B /* GankModel.swift */,
 			);
 			path = Model;
@@ -446,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				563127ED1C8C6324006A435E /* FrontEnd.storyboard in Resources */,
+				5644B3071C8F125B007E378B /* MyTableViewCell.xib in Resources */,
 				563127DD1C8C30E3006A435E /* Girls.storyboard in Resources */,
 				5631275B1C8C23C2006A435E /* LaunchScreen.storyboard in Resources */,
 				563127EF1C8C6E96006A435E /* GirlsTableViewCell.xib in Resources */,
@@ -526,14 +533,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				563127F11C8C70FE006A435E /* GirlsTableViewCell.swift in Sources */,
+				5644B3091C8F1268007E378B /* MyTableView.swift in Sources */,
 				563127E31C8C34C2006A435E /* IOSViewController.swift in Sources */,
-				5644B2FA1C8EE2F0007E378B /* GirlsDaily.swift in Sources */,
 				5644B3001C8EE5C4007E378B /* GankModel.swift in Sources */,
 				563127A11C8C2C3E006A435E /* TabBarController.swift in Sources */,
 				563127DF1C8C3107006A435E /* GirlsViewController.swift in Sources */,
 				563127E71C8C4721006A435E /* AndroidViewController.swift in Sources */,
 				563127EB1C8C6310006A435E /* FrontEndViewController.swift in Sources */,
 				563127511C8C23C2006A435E /* AppDelegate.swift in Sources */,
+				5644B3031C8F0B32007E378B /* GankDaily.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

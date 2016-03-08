@@ -21,8 +21,7 @@ class GankModel
   
   var delegate: GankModelDelegate?
   
-  func getAlamofire() {
-    let string = "http://gank.io/api/data/福利/100/1"
+  func getAlamofireFromString(string: String) {
     let url = string.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet(charactersInString: string))
     print(url)
     Alamofire.request(.GET, url!).responseJSON() {
@@ -40,6 +39,7 @@ class GankModel
         var dictionary = GankDaily()
         dictionary.who = json["results"][i]["who"].stringValue
         dictionary.url = json["results"][i]["url"].stringValue
+        dictionary.desc = json["results"][i]["desc"].stringValue
         dictionary.dateFromString(json["results"][i]["createdAt"].stringValue)
         return dictionary
       }()

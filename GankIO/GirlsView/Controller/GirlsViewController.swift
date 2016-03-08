@@ -24,17 +24,18 @@ class GirlsViewController: UIViewController
     }
   }
   
-  private struct Names {
+  private struct GirlsViewNames {
     static let nibName = "GirlsTableViewCell"
     static let girlsTableViewCellName = "girlsTableViewCell"
+    static let girlsImageUrlString = "http://gank.io/api/data/福利/100/1"
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     model = GankModel()
-    model.getAlamofire()
-    girlsTableView.registerNib(UINib(nibName: Names.nibName, bundle: nil), forCellReuseIdentifier: Names.girlsTableViewCellName)
+    model.getAlamofireFromString(GirlsViewNames.girlsImageUrlString)
+    girlsTableView.registerNib(UINib(nibName: GirlsViewNames.nibName, bundle: nil), forCellReuseIdentifier: GirlsViewNames.girlsTableViewCellName)
   }
 }
 
@@ -45,7 +46,7 @@ extension GirlsViewController: UITableViewDataSource
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier(Names.girlsTableViewCellName) as! GirlsTableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier(GirlsViewNames.girlsTableViewCellName) as! GirlsTableViewCell
     if model.gankDailys.count != 0 {
         let urlString = self.model.gankDailys[indexPath.row].url
       cell.girlImageView.kf_setImageWithURL(NSURL(string: urlString)!)

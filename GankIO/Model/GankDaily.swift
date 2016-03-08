@@ -13,6 +13,7 @@ struct GankDaily
   var creatAt = ""
   var who = ""
   var url = ""
+  var desc = ""
   
   mutating func dateFromString(string: String) {
     let dateFormatter = NSDateFormatter()

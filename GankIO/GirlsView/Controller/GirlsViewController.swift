@@ -24,6 +24,8 @@ class GirlsViewController: UIViewController
     }
   }
   
+  var visited = [Bool]()
+  
   private struct GirlsViewNames {
     static let nibName = "GirlsTableViewCell"
     static let girlsTableViewCellName = "girlsTableViewCell"
@@ -33,9 +35,17 @@ class GirlsViewController: UIViewController
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    initVisitedArray()
+    
     model = GankModel()
     model.getAlamofireFromString(GirlsViewNames.girlsImageUrlString)
     girlsTableView.registerNib(UINib(nibName: GirlsViewNames.nibName, bundle: nil), forCellReuseIdentifier: GirlsViewNames.girlsTableViewCellName)
+  }
+  
+  func initVisitedArray() {
+    for _ in 1...100 {
+      visited.append(false)
+    }
   }
 }
 
@@ -54,14 +64,20 @@ extension GirlsViewController: UITableViewDataSource
       cell.girlImageView.clipsToBounds = true
       cell.nameLabel.text = self.model.gankDailys[indexPath.row].who
       cell.dateLabel.text = self.model.gankDailys[indexPath.row].creatAt
-      UIView.animateWithDuration(1) {
+      UIView.animateWithDuration(0.5) {
         cell.girlImageView.alpha = 1.0
         cell.contentView.alpha = 1.0
+      }
+      if visited[indexPath.row] == false {
+        cell.center.y += cell.bounds.height / 3
+        UIView.animateWithDuration(0.5) {
+          cell.center.y -= cell.bounds.height / 3
+        }
+        visited[indexPath.row] = true
       }
     } else {
       cell.girlImageView.alpha = 0
       cell.contentView.alpha = 0
-      print("is nil")
     }
     return cell
   }

@@ -23,7 +23,6 @@ class GankModel
   
   func getAlamofireFromString(string: String) {
     let url = string.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet(charactersInString: string))
-    print(url)
     Alamofire.request(.GET, url!).responseJSON() {
       response in
       if let data = response.result.value {

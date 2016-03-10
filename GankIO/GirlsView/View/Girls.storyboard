@@ -5,6 +5,39 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
+        <!--Girls Daily View Controller-->
+        <scene sceneID="4jY-FN-HYW">
+            <objects>
+                <viewController id="b2F-MA-K4P" customClass="GirlsDailyViewController" customModule="GankIO" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4iD-wO-SrS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ch2-MD-cGp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SCr-ae-o5N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mmb-dQ-qEr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mmb-dQ-qEr" firstAttribute="top" secondItem="SCr-ae-o5N" secondAttribute="top" id="BUb-fG-aNp"/>
+                            <constraint firstItem="mmb-dQ-qEr" firstAttribute="bottom" secondItem="Ch2-MD-cGp" secondAttribute="top" id="C4G-wG-322"/>
+                            <constraint firstAttribute="trailing" secondItem="mmb-dQ-qEr" secondAttribute="trailing" id="iVw-V9-YH9"/>
+                            <constraint firstItem="mmb-dQ-qEr" firstAttribute="leading" secondItem="SCr-ae-o5N" secondAttribute="leading" id="oBR-kf-a0M"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="girlsDailyTableView" destination="mmb-dQ-qEr" id="gaY-y9-oM5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYv-4x-o84" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2556" y="403"/>
+        </scene>
         <!--福利-->
         <scene sceneID="Dm0-Ug-c7u">
             <objects>
@@ -33,7 +66,7 @@
                     <navigationItem key="navigationItem" title="福利" id="9si-MY-mD4"/>
                     <connections>
                         <outlet property="GirlsTableView" destination="oyM-qA-FLN" id="CD1-fd-slJ"/>
-                        <segue destination="X5E-dt-OfA" kind="show" identifier="showGirlImageDetail" id="ib7-RB-UrH"/>
+                        <segue destination="b2F-MA-K4P" kind="show" identifier="showGirlsDailyView" id="bwr-Fd-775"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lut-yy-szn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -70,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kj6-9A-vvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2619" y="403"/>
+            <point key="canvasLocation" x="3199" y="403"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d4O-oG-fh4">

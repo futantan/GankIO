@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		4D53C731459FE9D0F09FA32E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F80B7BA81D4C86B396BCBE /* Pods.framework */; };
 		561CF7DE1C9107DE00447671 /* GirlImageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561CF7DD1C9107DE00447671 /* GirlImageDetailViewController.swift */; };
+		561CF7E01C9180D300447671 /* GirlsDailyTableVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561CF7DF1C9180D300447671 /* GirlsDailyTableVIewController.swift */; };
+		561CF7E21C91831700447671 /* GirlsDailyImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561CF7E11C91831700447671 /* GirlsDailyImageTableViewCell.xib */; };
+		561CF7E41C91834E00447671 /* GirlsDailyArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 561CF7E31C91834E00447671 /* GirlsDailyArticleTableViewCell.xib */; };
+		561CF7E61C91836E00447671 /* GirlsDailyImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561CF7E51C91836E00447671 /* GirlsDailyImageTableViewCell.swift */; };
+		561CF7E81C9183A100447671 /* GirlsDailyArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561CF7E71C9183A100447671 /* GirlsDailyArticleTableViewCell.swift */; };
 		563127511C8C23C2006A435E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563127501C8C23C2006A435E /* AppDelegate.swift */; };
 		563127581C8C23C2006A435E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 563127571C8C23C2006A435E /* Assets.xcassets */; };
 		5631275B1C8C23C2006A435E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 563127591C8C23C2006A435E /* LaunchScreen.storyboard */; };
@@ -52,6 +57,11 @@
 /* Begin PBXFileReference section */
 		31C689057C4556DF5682D9B1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		561CF7DD1C9107DE00447671 /* GirlImageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlImageDetailViewController.swift; sourceTree = "<group>"; };
+		561CF7DF1C9180D300447671 /* GirlsDailyTableVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlsDailyTableVIewController.swift; sourceTree = "<group>"; };
+		561CF7E11C91831700447671 /* GirlsDailyImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GirlsDailyImageTableViewCell.xib; sourceTree = "<group>"; };
+		561CF7E31C91834E00447671 /* GirlsDailyArticleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GirlsDailyArticleTableViewCell.xib; sourceTree = "<group>"; };
+		561CF7E51C91836E00447671 /* GirlsDailyImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlsDailyImageTableViewCell.swift; sourceTree = "<group>"; };
+		561CF7E71C9183A100447671 /* GirlsDailyArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GirlsDailyArticleTableViewCell.swift; sourceTree = "<group>"; };
 		5631274D1C8C23C2006A435E /* GankIO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GankIO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		563127501C8C23C2006A435E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		563127571C8C23C2006A435E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -254,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				563127DE1C8C3107006A435E /* GirlsViewController.swift */,
+				561CF7DF1C9180D300447671 /* GirlsDailyTableVIewController.swift */,
 				561CF7DD1C9107DE00447671 /* GirlImageDetailViewController.swift */,
 			);
 			path = Controller;
@@ -265,6 +276,10 @@
 				563127DC1C8C30E3006A435E /* Girls.storyboard */,
 				563127EE1C8C6E96006A435E /* GirlsTableViewCell.xib */,
 				563127F01C8C70FE006A435E /* GirlsTableViewCell.swift */,
+				561CF7E11C91831700447671 /* GirlsDailyImageTableViewCell.xib */,
+				561CF7E51C91836E00447671 /* GirlsDailyImageTableViewCell.swift */,
+				561CF7E31C91834E00447671 /* GirlsDailyArticleTableViewCell.xib */,
+				561CF7E71C9183A100447671 /* GirlsDailyArticleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -457,6 +472,8 @@
 				563127ED1C8C6324006A435E /* FrontEnd.storyboard in Resources */,
 				5644B3071C8F125B007E378B /* MyTableViewCell.xib in Resources */,
 				563127DD1C8C30E3006A435E /* Girls.storyboard in Resources */,
+				561CF7E41C91834E00447671 /* GirlsDailyArticleTableViewCell.xib in Resources */,
+				561CF7E21C91831700447671 /* GirlsDailyImageTableViewCell.xib in Resources */,
 				5631275B1C8C23C2006A435E /* LaunchScreen.storyboard in Resources */,
 				563127EF1C8C6E96006A435E /* GirlsTableViewCell.xib in Resources */,
 				563127A01C8C2C3E006A435E /* TabBar.storyboard in Resources */,
@@ -535,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				561CF7E81C9183A100447671 /* GirlsDailyArticleTableViewCell.swift in Sources */,
 				563127F11C8C70FE006A435E /* GirlsTableViewCell.swift in Sources */,
 				5644B3091C8F1268007E378B /* MyTableView.swift in Sources */,
 				563127E31C8C34C2006A435E /* IOSViewController.swift in Sources */,
@@ -543,7 +561,9 @@
 				563127DF1C8C3107006A435E /* GirlsViewController.swift in Sources */,
 				561CF7DE1C9107DE00447671 /* GirlImageDetailViewController.swift in Sources */,
 				563127E71C8C4721006A435E /* AndroidViewController.swift in Sources */,
+				561CF7E61C91836E00447671 /* GirlsDailyImageTableViewCell.swift in Sources */,
 				563127EB1C8C6310006A435E /* FrontEndViewController.swift in Sources */,
+				561CF7E01C9180D300447671 /* GirlsDailyTableVIewController.swift in Sources */,
 				563127511C8C23C2006A435E /* AppDelegate.swift in Sources */,
 				5644B3031C8F0B32007E378B /* GankDaily.swift in Sources */,
 			);

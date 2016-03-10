@@ -30,7 +30,7 @@ class GirlsViewController: UIViewController
     static let nibName = "GirlsTableViewCell"
     static let girlsTableViewCellName = "girlsTableViewCell"
     static let girlsImageUrlString = "http://gank.io/api/data/福利/100/1"
-    static let showGirlImageDetailSegueIdentifier = "showGirlImageDetail"
+    static let showGirlImageDetailSegueIdentifier = "showGirlsDailyView"
   }
   
   override func viewDidLoad() {
@@ -60,11 +60,6 @@ class GirlsViewController: UIViewController
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if let identifies = segue.identifier {
       switch identifies {
-      case GirlsViewNames.showGirlImageDetailSegueIdentifier:
-        let controller = segue.destinationViewController as! GirlImageDetailViewController
-        let indexPath = sender as! NSIndexPath
-        let url = model.gankDailys[indexPath.row].url
-        controller.imageURL = NSURL(string: url)!
       default: break
       }
     }

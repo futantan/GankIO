@@ -36,6 +36,7 @@ class GirlsViewController: UIViewController
     super.viewDidLoad()
     
     initVisitedArray()
+    setUpColors()
     
     model = GankModel()
     model.getAlamofireFromString(GirlsViewNames.girlsImageUrlString)
@@ -45,6 +46,13 @@ class GirlsViewController: UIViewController
   func initVisitedArray() {
     for _ in 1...100 {
       visited.append(false)
+    }
+  }
+  
+  func setUpColors() {
+    self.view.tintColor = UIColor.whiteColor()
+    if let controller = self.navigationController {
+      controller.navigationBar.barTintColor = UIColor(red:0.29, green:0.35, blue:0.5, alpha:1)
     }
   }
 }
@@ -87,13 +95,15 @@ extension GirlsViewController: UITableViewDataSource
   }
 }
 
-extension GirlsViewController: UITableViewDelegate {
+extension GirlsViewController: UITableViewDelegate
+{
   func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
     return nil
   }
 }
 
-extension GirlsViewController: GankModelDelegate {
+extension GirlsViewController: GankModelDelegate
+{
   func gankModelDidGetAlamofire() {
     girlsTableView.reloadData()
   }

@@ -26,14 +26,14 @@ class TabBarController: UITabBarController
   
   func setAllChildViews() {
     let girlsViewController = loadViewControllerFromStoryboard(ChildViewNames.girlsView)
-    girlsViewController!.tabBarItem.title = "妹子"
+    girlsViewController!.tabBarItem.title = "福利"
     girlsViewController!.tabBarItem.image = UIImage(named: "bra")
     self.addChildViewController(girlsViewController!)
     
-    let iOSViewController = loadViewControllerFromStoryboard(ChildViewNames.iOSView)
-    iOSViewController!.tabBarItem.title = "iOS"
-    iOSViewController!.tabBarItem.image = UIImage(named: "apple")
-    self.addChildViewController(iOSViewController!)
+    let iOSViewController = loadViewControllerFromStoryboard(ChildViewNames.iOSView) as! UINavigationController
+    iOSViewController.tabBarItem.title = "iOS"
+    iOSViewController.tabBarItem.image = UIImage(named: "apple")
+    self.addChildViewController(iOSViewController)
     
     let androidViewController = loadViewControllerFromStoryboard(ChildViewNames.androidView)
     androidViewController!.tabBarItem.title = "Android"
@@ -54,5 +54,13 @@ class TabBarController: UITabBarController
     let storyboard = UIStoryboard(name: name, bundle: nil)
     let controller = storyboard.instantiateInitialViewController()
     return controller
+  }
+  
+  override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    return .LightContent
+  }
+  
+  override func childViewControllerForStatusBarStyle() -> UIViewController? {
+    return nil
   }
 }

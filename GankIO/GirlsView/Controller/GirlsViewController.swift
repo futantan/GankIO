@@ -30,6 +30,7 @@ class GirlsViewController: UIViewController
     static let nibName = "GirlsTableViewCell"
     static let girlsTableViewCellName = "girlsTableViewCell"
     static let girlsImageUrlString = "http://gank.io/api/data/福利/100/1"
+    static let showGirlImageDetailSegueIdentifier = "showGirlImageDetail"
   }
   
   override func viewDidLoad() {
@@ -53,6 +54,19 @@ class GirlsViewController: UIViewController
     self.view.tintColor = UIColor.whiteColor()
     if let controller = self.navigationController {
       controller.navigationBar.barTintColor = UIColor(red:0.29, green:0.35, blue:0.5, alpha:1)
+    }
+  }
+  
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if let identifies = segue.identifier {
+      switch identifies {
+      case GirlsViewNames.showGirlImageDetailSegueIdentifier:
+        let controller = segue.destinationViewController as! GirlImageDetailViewController
+        let indexPath = sender as! NSIndexPath
+        let url = model.gankDailys[indexPath.row].url
+        controller.imageURL = NSURL(string: url)!
+      default: break
+      }
     }
   }
 }
@@ -97,8 +111,9 @@ extension GirlsViewController: UITableViewDataSource
 
 extension GirlsViewController: UITableViewDelegate
 {
-  func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-    return nil
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    performSegueWithIdentifier(GirlsViewNames.showGirlImageDetailSegueIdentifier, sender: indexPath)
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
 }
 

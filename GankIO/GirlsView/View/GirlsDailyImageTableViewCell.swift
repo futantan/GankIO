@@ -8,6 +8,7 @@
 
 import UIKit
 
-class GirlsDailyImageTableViewCell: UITableViewCell {
-  
+class GirlsDailyImageTableViewCell: UITableViewCell
+{
+  @IBOutlet weak var girlImageView: UIImageView!
 }

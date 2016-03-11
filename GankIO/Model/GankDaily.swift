@@ -10,10 +10,11 @@ import Foundation
 
 struct GankDaily
 {
-  var creatAt = ""
+  var dateString = ""
   var who = ""
   var url = ""
   var desc = ""
+  var type = ""
   
   mutating func dateFromString(string: String) {
     let dateFormatter = NSDateFormatter()
@@ -22,14 +23,20 @@ struct GankDaily
     let date = dateFormatter.dateFromString(cutStringToTimable(string))
     dateFormatter.dateFormat = "yyyy.MM.dd"
     if let date = date {
-      creatAt = dateFormatter.stringFromDate(date)
+      dateString = dateFormatter.stringFromDate(date)
     } else {
-      creatAt = ""
+      dateString = ""
     }
   }
   
   func cutStringToTimable(string: String) -> String {
     let index = string.startIndex.advancedBy(19)
     return string.substringToIndex(index)
+  }
+  
+  func getDate() -> NSDate {
+    let dateFormatter = NSDateFormatter()
+    dateFormatter.dateFormat = "yyyy.MM.dd"
+    return dateFormatter.dateFromString(dateString)!
   }
 }

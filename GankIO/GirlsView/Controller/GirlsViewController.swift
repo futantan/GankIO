@@ -30,14 +30,14 @@ class GirlsViewController: UIViewController
     static let nibName = "GirlsTableViewCell"
     static let girlsTableViewCellName = "girlsTableViewCell"
     static let girlsImageUrlString = "http://gank.io/api/data/福利/100/1"
-    static let showGirlImageDetailSegueIdentifier = "showGirlsDailyView"
+    static let showGirlsDailyViewSegueIdentifier = "showGirlsDailyView"
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     initVisitedArray()
-    setUpColors()
+    setUpNavigatonBar()
     
     model = GankModel()
     model.getAlamofireFromString(GirlsViewNames.girlsImageUrlString)
@@ -50,16 +50,22 @@ class GirlsViewController: UIViewController
     }
   }
   
-  func setUpColors() {
+  func setUpNavigatonBar() {
     self.view.tintColor = UIColor.whiteColor()
     if let controller = self.navigationController {
       controller.navigationBar.barTintColor = UIColor(red:0.29, green:0.35, blue:0.5, alpha:1)
+      controller.navigationBar.hidden = false
     }
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if let identifies = segue.identifier {
       switch identifies {
+      case GirlsViewNames.showGirlsDailyViewSegueIdentifier:
+        let controller = segue.destinationViewController as! GirlsDailyViewController
+        let indexPath = sender as! NSIndexPath
+        let date = model.gankDailys[indexPath.row].getDate()
+        controller.girlsDailyDate = date
       default: break
       }
     }
@@ -76,13 +82,13 @@ extension GirlsViewController: UITableViewDataSource
     let cell = tableView.dequeueReusableCellWithIdentifier(GirlsViewNames.girlsTableViewCellName) as! GirlsTableViewCell
     if model.gankDailys.count != 0 {
       setUpCell(cell, indexPath: indexPath)
-      UIView.animateWithDuration(0.5) {
+      UIView.animateWithDuration(0.2) {
         cell.girlImageView.alpha = 1.0
         cell.contentView.alpha = 1.0
       }
       if visited[indexPath.row] == false {
         cell.center.y += cell.bounds.height / 3
-        UIView.animateWithDuration(0.5) {
+        UIView.animateWithDuration(0.2) {
           cell.center.y -= cell.bounds.height / 3
         }
         visited[indexPath.row] = true
@@ -100,14 +106,14 @@ extension GirlsViewController: UITableViewDataSource
     cell.girlImageView.contentMode = .ScaleAspectFill
     cell.girlImageView.clipsToBounds = true
     cell.nameLabel.text = model.gankDailys[indexPath.row].who
-    cell.dateLabel.text = model.gankDailys[indexPath.row].creatAt
+    cell.dateLabel.text = model.gankDailys[indexPath.row].dateString
   }
 }
 
 extension GirlsViewController: UITableViewDelegate
 {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    performSegueWithIdentifier(GirlsViewNames.showGirlImageDetailSegueIdentifier, sender: indexPath)
+    performSegueWithIdentifier(GirlsViewNames.showGirlsDailyViewSegueIdentifier, sender: indexPath)
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
 }

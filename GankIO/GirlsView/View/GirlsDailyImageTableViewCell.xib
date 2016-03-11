@@ -7,13 +7,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="300" id="5hW-PY-VDJ">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="400" id="5hW-PY-VDJ" customClass="GirlsDailyImageTableViewCell" customModule="GankIO" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5hW-PY-VDJ" id="dOC-7P-VOT">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="299.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="399.5"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aIn-R9-EiL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="399.5"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="aIn-R9-EiL" firstAttribute="centerY" secondItem="dOC-7P-VOT" secondAttribute="centerY" id="dki-w9-xYZ"/>
+                    <constraint firstItem="aIn-R9-EiL" firstAttribute="leading" secondItem="dOC-7P-VOT" secondAttribute="leading" id="eQq-bu-lwK"/>
+                    <constraint firstItem="aIn-R9-EiL" firstAttribute="top" secondItem="dOC-7P-VOT" secondAttribute="top" id="i5g-Go-Eoo"/>
+                    <constraint firstAttribute="trailing" secondItem="aIn-R9-EiL" secondAttribute="trailing" id="oUg-5N-ra3"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="girlImageView" destination="aIn-R9-EiL" id="gIu-Zn-AMg"/>
+            </connections>
             <point key="canvasLocation" x="277" y="361"/>
         </tableViewCell>
     </objects>

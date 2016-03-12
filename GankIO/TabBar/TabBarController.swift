@@ -26,25 +26,17 @@ class TabBarController: UITabBarController
   }
   
   func setAllChildViews() {
-    let girlsViewController = loadViewControllerFromStoryboard(.GirlsView)
-    girlsViewController!.tabBarItem.title = "福利"
-    girlsViewController!.tabBarItem.image = UIImage(named: "bra")
-    self.addChildViewController(girlsViewController!)
-    
-    let iOSViewController = loadViewControllerFromStoryboard(.iOSView) as! UINavigationController
-    iOSViewController.tabBarItem.title = "iOS"
-    iOSViewController.tabBarItem.image = UIImage(named: "apple")
-    self.addChildViewController(iOSViewController)
-    
-    let androidViewController = loadViewControllerFromStoryboard(.AndroidView)
-    androidViewController!.tabBarItem.title = "Android"
-    androidViewController!.tabBarItem.image = UIImage(named: "android")
-    self.addChildViewController(androidViewController!)
-    
-    let frontEndViewController = loadViewControllerFromStoryboard(.FrontEndView)
-    frontEndViewController!.tabBarItem.title = "前端"
-    frontEndViewController!.tabBarItem.image = UIImage(named: "frontEnd")
-    self.addChildViewController(frontEndViewController!)
+    addChildViewControllerFromStoryboradWithName(.GirlsView, title: "福利", imageName: "bra")
+    addChildViewControllerFromStoryboradWithName(.iOSView, title: "iOS", imageName: "apple")
+    addChildViewControllerFromStoryboradWithName(.AndroidView, title: "Android", imageName: "android")
+    addChildViewControllerFromStoryboradWithName(.FrontEndView, title: "前端", imageName: "frontEnd")
+  }
+  
+  private func addChildViewControllerFromStoryboradWithName(name: ChildViewName, title: String, imageName: String) {
+    let vc = loadViewControllerFromStoryboard(name)
+    vc!.tabBarItem.title = title
+    vc!.tabBarItem.image = UIImage(named: imageName)
+    self.addChildViewController(vc!)
   }
   
   func setAllTabBarItems() {

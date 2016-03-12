@@ -78,7 +78,9 @@ class GirlsDailyViewController: UIViewController
     cellGroups.iOS = model.gankDailysIOS.count
     cellGroups.Android = model.gankDailysAndroid.count + cellGroups.iOS
     cellGroups.frontEnd = model.gankDailysFrontEnd.count + cellGroups.Android
-    cellGroups.vedio = 1 + cellGroups.frontEnd
+    cellGroups.recommend = model.gankDailysBlindlyRecommend.count + cellGroups.frontEnd
+    cellGroups.resource = model.gankDailysExpandResource.count + cellGroups.recommend
+    cellGroups.vedio = 1 + cellGroups.resource
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -116,17 +118,27 @@ extension GirlsDailyViewController: UITableViewDataSource
         let cell = articleCellForDictionary(dictionary)
         cell.logoImageView.image = UIImage(named: "apple")
         return cell
-      case (cellGroups.iOS + 1)...(cellGroups.Android):
+      case cellGroups.iOS...cellGroups.Android:
         let dictionary = model.gankDailysAndroid[indexPath.row - cellGroups.iOS - 1]
         let cell = articleCellForDictionary(dictionary)
         cell.logoImageView.image = UIImage(named: "android")
         return cell
-      case (cellGroups.Android + 1)...(cellGroups.frontEnd):
+      case cellGroups.Android...cellGroups.frontEnd:
         let dictionary = model.gankDailysFrontEnd[indexPath.row - cellGroups.Android - 1]
         let cell = articleCellForDictionary(dictionary)
         cell.logoImageView.image = UIImage(named: "frontEnd")
         return cell
-      case (cellGroups.frontEnd + 1)...(cellGroups.vedio):
+      case cellGroups.frontEnd...cellGroups.recommend:
+        let dictionary = model.gankDailysBlindlyRecommend[indexPath.row - cellGroups.frontEnd - 1]
+        let cell = articleCellForDictionary(dictionary)
+        cell.logoImageView.image = UIImage(named: "recommend")
+        return cell
+      case cellGroups.recommend...cellGroups.resource:
+        let dictionary = model.gankDailysExpandResource[indexPath.row - cellGroups.recommend - 1]
+        let cell = articleCellForDictionary(dictionary)
+        cell.logoImageView.image = UIImage(named: "resource")
+        return cell
+      case cellGroups.vedio:
         let dictionary = model.gankDailysRelaxVedio
         let cell = articleCellForDictionary(dictionary)
         cell.logoImageView.image = UIImage(named: "play")

@@ -8,6 +8,9 @@
 
 import UIKit
 
-class GirlsDailyArticleTableViewCell: UITableViewCell {
-  
+class GirlsDailyArticleTableViewCell: UITableViewCell
+{
+  @IBOutlet weak var logoImageView: UIImageView!
+  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var autherLabel: UILabel!
 }

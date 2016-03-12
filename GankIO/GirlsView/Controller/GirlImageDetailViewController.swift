@@ -23,8 +23,12 @@ class GirlImageDetailViewController: UIViewController
   var girlImageView = UIImageView()
   
   override func viewDidLoad() {
-    self.navigationController!.navigationBar.hidden = true
+    self.navigationController!.navigationBar.alpha = 0
     setUpImageView()
+  }
+  
+  override func viewDidAppear(animated: Bool) {
+    self.navigationController!.navigationBar.alpha = 0
   }
   
   func setUpImageView() {

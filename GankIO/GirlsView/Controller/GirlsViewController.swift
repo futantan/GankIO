@@ -54,7 +54,6 @@ class GirlsViewController: UIViewController
     self.view.tintColor = UIColor.whiteColor()
     if let controller = self.navigationController {
       controller.navigationBar.barTintColor = UIColor(red:0.29, green:0.35, blue:0.5, alpha:1)
-      controller.navigationBar.hidden = false
     }
   }
   

@@ -47,7 +47,6 @@ class GankModel
         self.parseJSONForDaily(data)
       }
     }
-    print(gankDailysGirlImage)
   }
   
   func URLFromDate(date: NSDate) -> String {
@@ -85,7 +84,6 @@ class GankModel
   func parseJSONForDaily(data: AnyObject) {
     let json = JSON(data)
     gankDailysGirlImage = dictionaryFromJSONWithTypeAndIndex(json, type: "福利", index: 0)
-    print(gankDailysGirlImage)
     gankDailysRelaxVedio = dictionaryFromJSONWithTypeAndIndex(json, type: "休息视频", index: 0)
     for index in 0...20 {
       let dictionary = dictionaryFromJSONWithTypeAndIndex(json, type: "Android", index: index)
@@ -126,7 +124,7 @@ class GankModel
     if json["results"][type][index]["who"].stringValue != "" {
       dictionary.who = json["results"][type][index]["who"].stringValue
       dictionary.url = json["results"][type][index]["url"].stringValue
-      dictionary.desc = json["results"][type][index]["deck"].stringValue
+      dictionary.desc = json["results"][type][index]["desc"].stringValue
       dictionary.type = type
     }
     return dictionary

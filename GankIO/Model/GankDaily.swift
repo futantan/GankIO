@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct GankDaily
-{
+struct GankDaily {
   var dateString = ""
   var who = ""
   var url = ""

@@ -8,8 +8,7 @@
 
 import UIKit
 
-class GirlsDailyViewController: UIViewController
-{
+class GirlsDailyViewController: UIViewController {
   @IBOutlet weak var girlsDailyTableView: UITableView! {
     didSet {
       girlsDailyTableView.delegate = self

@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-class MyTableViewCell: UITableViewCell
-{
+class MyTableViewCell: UITableViewCell {
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet weak var nameLabel: UILabel!
 }

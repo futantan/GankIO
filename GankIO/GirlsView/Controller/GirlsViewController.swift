@@ -9,8 +9,7 @@
 import UIKit
 import Kingfisher
 
-class GirlsViewController: UIViewController
-{
+class GirlsViewController: UIViewController {
   @IBOutlet weak var girlsTableView: UITableView! {
     didSet {
       girlsTableView.dataSource = self

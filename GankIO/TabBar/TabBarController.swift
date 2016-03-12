@@ -8,8 +8,7 @@
 
 import UIKit
 
-class TabBarController: UITabBarController
-{
+class TabBarController: UITabBarController {
   private enum ChildViewName: String {
     case GirlsView = "Girls"
     case iOSView = "IOS"

@@ -10,13 +10,11 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-protocol GankModelDelegate
-{
+protocol GankModelDelegate {
   func gankModelDidGetAlamofire()
 }
 
-class GankModel
-{
+class GankModel {
   var gankDailys = [GankDaily]()
   
   var gankDailysGirlImage = GankDaily()

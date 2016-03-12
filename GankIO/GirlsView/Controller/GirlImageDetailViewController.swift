@@ -9,8 +9,7 @@
 import UIKit
 import Kingfisher
 
-class GirlImageDetailViewController: UIViewController
-{
+class GirlImageDetailViewController: UIViewController {
   @IBOutlet var scrollView: UIScrollView! {
     didSet {
       scrollView.delegate = self

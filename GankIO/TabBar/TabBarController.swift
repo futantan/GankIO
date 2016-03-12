@@ -39,10 +39,6 @@ class TabBarController: UITabBarController
     self.addChildViewController(vc!)
   }
   
-  func setAllTabBarItems() {
-    
-  }
-  
   private func loadViewControllerFromStoryboard(name: ChildViewName) -> UIViewController? {
     let storyboard = UIStoryboard(name: name.rawValue, bundle: nil)
     let controller = storyboard.instantiateInitialViewController()

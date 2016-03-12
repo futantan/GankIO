@@ -78,9 +78,7 @@ class GirlsDailyViewController: UIViewController
     cellGroups.iOS = model.gankDailysIOS.count
     cellGroups.Android = model.gankDailysAndroid.count + cellGroups.iOS
     cellGroups.frontEnd = model.gankDailysFrontEnd.count + cellGroups.Android
-    cellGroups.recommend = model.gankDailysBlindlyRecommend.count + cellGroups.frontEnd
-    cellGroups.resource = model.gankDailysExpandResource.count + cellGroups.recommend
-    cellGroups.vedio = 1 + cellGroups.resource
+    cellGroups.vedio = 1 + cellGroups.frontEnd
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -128,17 +126,7 @@ extension GirlsDailyViewController: UITableViewDataSource
         let cell = articleCellForDictionary(dictionary)
         cell.logoImageView.image = UIImage(named: "frontEnd")
         return cell
-      case (cellGroups.frontEnd + 1)...(cellGroups.recommend):
-        let dictionary = model.gankDailysBlindlyRecommend[indexPath.row - cellGroups.frontEnd - 1]
-        let cell = articleCellForDictionary(dictionary)
-        cell.logoImageView.image = UIImage(named: "recommend")
-        return cell
-      case (cellGroups.recommend + 1)...(cellGroups.resource):
-        let dictionary = model.gankDailysExpandResource[indexPath.row - cellGroups.recommend - 1]
-        let cell = articleCellForDictionary(dictionary)
-        cell.logoImageView.image = UIImage(named: "resource")
-        return cell
-      case (cellGroups.resource + 1)...(cellGroups.vedio):
+      case (cellGroups.frontEnd + 1)...(cellGroups.vedio):
         let dictionary = model.gankDailysRelaxVedio
         let cell = articleCellForDictionary(dictionary)
         cell.logoImageView.image = UIImage(named: "play")

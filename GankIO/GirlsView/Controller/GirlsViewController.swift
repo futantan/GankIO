@@ -19,12 +19,15 @@ class GirlsViewController: UIViewController {
   
   var model = GankModel() {
     didSet {
+      print("model set many times")
       model.delegate = self
     }
   }
   
-  var visited = [Bool]()
+  var visited = [Bool](count: 100, repeatedValue: false)
   
+  
+  // TODO: - 网络请求分页
   private struct GirlsViewNames {
     static let nibName = "GirlsTableViewCell"
     static let girlsTableViewCellName = "girlsTableViewCell"
@@ -35,7 +38,7 @@ class GirlsViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    initVisitedArray()
+//    initVisitedArray()
     setUpNavigatonBar()
     
     model = GankModel()
@@ -43,11 +46,13 @@ class GirlsViewController: UIViewController {
     girlsTableView.registerNib(UINib(nibName: GirlsViewNames.nibName, bundle: nil), forCellReuseIdentifier: GirlsViewNames.girlsTableViewCellName)
   }
   
-  func initVisitedArray() {
-    for _ in 1...100 {
-      visited.append(false)
-    }
-  }
+  // TODO: - 不要以 init 开头 这是 OC 时代的特定方法
+  // TODO: - 这种方式效率太差
+//  func initVisitedArray() {
+//    for _ in 1...100 {
+//      visited.append(false)
+//    }
+//  }
   
   func setUpNavigatonBar() {
     self.view.tintColor = UIColor.whiteColor()
@@ -97,6 +102,7 @@ extension GirlsViewController: UITableViewDataSource
     return cell
   }
   
+  // TODO: - move this to GirlsTableViewCell
   func setUpCell(cell: GirlsTableViewCell, indexPath: NSIndexPath) {
     cell.cardView.alpha = 1.0
     let urlString = self.model.gankDailys[indexPath.row].url
